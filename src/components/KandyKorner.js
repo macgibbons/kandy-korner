@@ -3,6 +3,8 @@ import "./location/Locations.css"
 import "./KandyKorner.css"
 import LocationList from "./location/LocationList";
 import { LocationProvider } from "./location/LocationProvider";
+import { ProductProvider } from "./product/ProductProvider";
+import ProductList from "./product/ProductList";
 
 
 export default () => (
@@ -22,6 +24,12 @@ export default () => (
           </LocationProvider>
         </article>
 
+        <h2>Products</h2>
+        <article className="products">
+          <ProductProvider>
+            <ProductList />
+          </ProductProvider>
+        </article>
         
     </>
 )
