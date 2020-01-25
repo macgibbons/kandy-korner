@@ -25,6 +25,7 @@ export default (props) => {
                     <ProductList />
                 </Route>
             </ProductProvider>
+            
             <EmployeeProvider>
                 <LocationProvider>
                     <Route exact path="/employees" render={

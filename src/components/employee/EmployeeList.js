@@ -7,6 +7,14 @@ export default (props) => {
     const { employees } = useContext(EmployeeContext)
 
     return (
+        <>
+        <h2>Kandy Korner</h2>
+            <small>get yer fix.</small>
+
+            <address>
+                <div>Visit Us at the Germantown Location</div>
+                <div>500 Rosa Parks blvd</div>
+            </address>
         <div className="employees">
             <h1>Employees</h1>
             <button className="employeeButton" onClick={() => props.history.push("/employees/create")}>
@@ -16,5 +24,6 @@ export default (props) => {
                 {employees.map(employee => <Employee key={employee.id} employee={employee} />)}
             </article>
         </div>
+    </>
     )
 }
