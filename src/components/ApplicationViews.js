@@ -4,7 +4,9 @@ import { LocationProvider } from "./location/LocationProvider"
 import LocationList from "./location/LocationList"
 import { ProductProvider } from "./product/ProductProvider";
 import ProductList from "./product/ProductList";
-
+import { EmployeeProvider } from "./employee/EmployeeProvider";
+import EmployeeList from "./employee/EmployeeList";
+import EmployeeForm from "./employee/EmployeeForm";
 
 
 
@@ -23,6 +25,19 @@ export default (props) => {
                     <ProductList />
                 </Route>
             </ProductProvider>
+            <EmployeeProvider>
+                <LocationProvider>
+                    <Route exact path="/employees" render={
+                        props => <EmployeeList {...props} />
+                    } />
+
+                    <Route exact path="/employees/create" render = {
+                        props => <EmployeeForm {...props} />
+                    } />
+                       
+
+                </LocationProvider>
+            </EmployeeProvider>
 
             
             
