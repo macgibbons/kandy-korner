@@ -119,7 +119,6 @@ export default props => {
                     id="employeeRate"
                     ref={employeeRate}
                     required
-                    autoFocus
                     className="form-control"
                     placeholder="Employee Hourly Rate"
                 />
