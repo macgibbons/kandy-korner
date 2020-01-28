@@ -3,6 +3,7 @@ import { ProductContext } from "./ProductProvider";
 import Product from "./Product";
 
 export default () => {
+
     const { products } = useContext(ProductContext)
 
     return (
@@ -14,7 +15,7 @@ export default () => {
                 <div>Visit Us at the Germantown Location</div>
                 <div>500 Rosa Parks blvd</div>
             </address>
-        <div className="locations">
+        <div className="products">
         {
             products.map(prod => <Product key={prod.id} product={prod} />)
         }
